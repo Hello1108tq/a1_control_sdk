@@ -1,0 +1,22 @@
+prefix=/home/xyf/Documents/robot_new_ws/install
+exec_prefix=/home/xyf/Documents/robot_new_ws/install
+libdir=/home/xyf/Documents/robot_new_ws/install/lib
+bindir=/home/xyf/Documents/robot_new_ws/install/bin
+pkglibdir=/home/xyf/Documents/robot_new_ws/install/lib/hpp-fcl
+includedir=/home/xyf/Documents/robot_new_ws/install/include
+datarootdir=/home/xyf/Documents/robot_new_ws/install/share
+pkgdatarootdir=/home/xyf/Documents/robot_new_ws/install/share
+docdir=/home/xyf/Documents/robot_new_ws/install/share/doc/hpp-fcl
+doxygendocdir=/home/xyf/Documents/robot_new_ws/install/share/doc/hpp-fcl/doxygen-html
+
+Name: hpp-fcl
+Description: HPP fork of FCL -- The Flexible Collision Library
+URL: https://github.com/humanoid-path-planner/hpp-fcl
+Version: 1.6.0
+Requires: eigen3 >= 3.0.0, octomap >= 1.6
+Conflicts: 
+Libs: -L${libdir}  -lhpp-fcl
+Libs.private: 
+Cflags:  -I${includedir} -DHPP_FCL_HAVE_OCTOMAP -DFCL_HAVE_OCTOMAP -DOCTOMAP_MAJOR_VERSION=1 -DOCTOMAP_MINOR_VERSION=9 -DOCTOMAP_PATCH_VERSION=8
+
+

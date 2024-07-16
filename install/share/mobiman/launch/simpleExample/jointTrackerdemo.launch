@@ -1,0 +1,32 @@
+<launch>
+  <arg name="model" />
+
+  <!-- 启动 my_rviz_node -->
+  <node pkg="mobiman" type="jointTracker_demo_node"
+        name="jointTracker_demo_node" output="screen" />
+
+  <param
+    name="robot_description"
+    textfile="$(find A1_URDF)/urdf/A1_URDF.urdf" />
+
+  <arg name="urdfFile" value="$(find mobiman)/../A1_URDF/urdf/A1_URDF.urdf" />
+  <arg name="taskFile" value="$(find mobiman)/config/task.info" />
+  <arg name="libFolder" value="$(find mobiman)/auto_generated/x1_robot" />
+
+  <param name="taskFile" value="$(arg taskFile)" />
+  <param name="urdfFile" value="$(arg urdfFile)" />
+  <param name="libFolder" value="$(arg libFolder)" />
+
+  <param name="joint_states_topic" value="/joint_states_host" />
+  <param name="joint_command" value="/arm_joint_command_host" />
+
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find r1urdfv20)/a1_arm_v3.rviz" />
+</launch>

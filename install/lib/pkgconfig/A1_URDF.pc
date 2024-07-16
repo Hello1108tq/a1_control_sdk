@@ -1,0 +1,8 @@
+prefix=/home/xyf/Documents/robot_new_ws/install
+
+Name: A1_URDF
+Description: Description of A1_URDF
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/xyf/Documents/robot_new_ws/install
+
+Name: a1_arm_v3
+Description: Description of a1_arm_v3
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

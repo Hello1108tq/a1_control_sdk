@@ -1,0 +1,22 @@
+prefix=/home/xyf/Documents/robot_new_ws/install
+exec_prefix=/home/xyf/Documents/robot_new_ws/install
+libdir=/home/xyf/Documents/robot_new_ws/install/lib
+bindir=/home/xyf/Documents/robot_new_ws/install/bin
+pkglibdir=/home/xyf/Documents/robot_new_ws/install/lib/pinocchio
+includedir=/home/xyf/Documents/robot_new_ws/install/include
+datarootdir=/home/xyf/Documents/robot_new_ws/install/share
+pkgdatarootdir=/home/xyf/Documents/robot_new_ws/install/share
+docdir=/home/xyf/Documents/robot_new_ws/install/share/doc/pinocchio
+doxygendocdir=/home/xyf/Documents/robot_new_ws/install/share/doc/pinocchio/doxygen-html
+
+Name: pinocchio
+Description: A fast and flexible implementation of Rigid Body Dynamics algorithms and their analytical derivatives
+URL: http://github.com/stack-of-tasks/pinocchio
+Version: 2.5.1
+Requires: eigen3 >= 3.0.5, urdfdom >= 0.2.0, hpp-fcl >= 1.4.0
+Conflicts: 
+Libs: -L${libdir}  -lpinocchio -L/usr/lib/x86_64-linux-gnu -lboost_filesystem -lboost_serialization -lboost_system
+Libs.private: 
+Cflags:  -I${includedir} -DPINOCCHIO_WITH_URDFDOM -DPINOCCHIO_WITH_HPP_FCL -DBOOST_MPL_LIMIT_LIST_SIZE=30
+
+

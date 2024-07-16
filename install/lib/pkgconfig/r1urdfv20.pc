@@ -1,0 +1,8 @@
+prefix=/home/xyf/Documents/robot_new_ws/install
+
+Name: r1urdfv20
+Description: Description of r1urdfv20
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
