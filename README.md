@@ -1,20 +1,31 @@
----
-title: 关节与末端移动接口
-
----
-
 # 关节与末端移动接口
 
-不论是末端移动还是关节移动, 需要先开启signal_arm的接口, 参照signal_arm文档
+## 目录
+- [关节与末端移动接口](#关节与末端移动接口)
+  - [目录](#目录)
+  - [项目介绍](#项目介绍)
+  - [末端移动示例](#末端移动示例)
+    - [使用如影片所示](#使用如影片所示)
+  - [末端轨迹移动示例](#末端轨迹移动示例)
+    - [实际效果如影片所示](#实际效果如影片所示)
+  - [关节移动示例](#关节移动示例)
+
+## 项目介绍
+本项目旨在提供a1机械臂的关节与末端移动控制接口，通过ROS系统实现机械臂的高效控制。无论是末端移动还是关节移动，均需先启动signal_arm接口，详细操作参见signal_arm文档。本项目包含以下几个主要功能：
+
+- **末端移动**：允许用户通过发布目标姿态消息来控制机械臂末端的位置和方向，适用于需要精确定位的应用。
+- **末端轨迹移动**：通过发布一系列姿态消息，实现机械臂末端沿特定轨迹移动，适用于复杂路径规划和执行。
+- **关节移动**：提供关节级别的控制接口，用户可以设置每个关节的目标位置，从而实现机械臂的整体协调运动。
 
 ## 末端移动示例
 
-先启动末端移动脚本, 这会开启一个a1机械臂的rviz, 默认在关节位置在零点
+先启动末端移动脚本, 这会开启一个a1机械臂的rviz, 默认在关节位置在零点。
 
-```
+```bash
 cd release/install
 source setup.bash
 roslaunch mobiman eeTrackerdemo.launch
+
 ```
 该launch档中
 ```
@@ -78,7 +89,7 @@ pass
 ### 使用如影片所示
 
 <video width="600" controls>
-  <source src="resource/eeDemo.mp4" type="video/mp4">
+  <source src="install/resource/eeDemo.mp4" type="video/mp4">
 </video>
 
 ## 末端轨迹移动示例
@@ -151,7 +162,7 @@ return 0;
 ```
 ### 实际效果如影片所示
 <video width="600" controls>
-  <source src="resource/eeTrajTrackerdemo.mp4" type="video/mp4">
+  <source src="install/resource/eeTrajTrackerdemo.mp4" type="video/mp4">
 </video>
 
 
